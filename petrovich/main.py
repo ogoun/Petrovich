@@ -31,7 +31,7 @@ class Petrovich(object):
                 'File with rules {} does not exists!'
             ).format(rules_path))
 
-        with open(DEFAULT_RULES_PATH, 'r') as fp:
+        with open(rules_path, 'r', encoding='utf-8') as fp:
             self.data = json.load(fp)
 
     def firstname(self, value, case, gender=None):
